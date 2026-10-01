@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+omnihawk-venv/
+
+# ROS 2 / colcon
+build/
+install/
+log/
+
+# PX4 build output
+PX4-Autopilot/build/
+
+# Generated ML artifacts
+*.engine
+*.plan
+
+# Windows / WSL / editors
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets / local environment
+.env
+.env.*
+*.key
+*.pem
