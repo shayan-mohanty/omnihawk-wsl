@@ -1,0 +1,3 @@
+numpy<2
+ultralytics>=8.3,<9
+mavsdk>=3,<4
