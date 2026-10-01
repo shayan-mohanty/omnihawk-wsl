@@ -33,7 +33,7 @@ In Ubuntu, clone the private repo using your GitHub credentials:
 
 ```bash
 sudo apt update && sudo apt install -y git
-git clone https://github.com/shayan-mohanty/omnihawk-wsl.git ~/omnihawk-wsl
+git clone --branch wsl-development-stack https://github.com/shayan-mohanty/omnihawk-wsl.git ~/omnihawk-wsl
 cd ~/omnihawk-wsl
 bash scripts/wsl/01_setup.sh
 bash scripts/wsl/03_download_model.sh
