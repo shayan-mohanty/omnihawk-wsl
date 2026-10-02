@@ -1,0 +1,14 @@
+name: Static checks
+on: [push, pull_request]
+jobs:
+  syntax:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bash syntax
+        run: |
+          for script in scripts/wsl/*.sh; do bash -n "$script"; done
+      - name: Python and package XML
+        run: |
+          python3 -m compileall -q scripts ros2_ws/src
+          python3 -c "import xml.etree.ElementTree as E; E.parse('ros2_ws/src/omnihawk_perception/package.xml')"
